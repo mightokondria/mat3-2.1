@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://durnxs0qxwxg5"]
+
+[ext_resource type="FontFile" uid="uid://d2udwoe8u714u" path="res://Assets/Fonts/upheavtt.ttf" id="1_1dqp1"]
+[ext_resource type="Script" path="res://Assets/Scenes/Areas/end_screen.gd" id="1_dfr75"]
+
+[node name="Area4" type="Node2D"]
+script = ExtResource("1_dfr75")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(28.6801, 16.085)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 398.0
+offset_top = 282.0
+offset_right = 659.0
+offset_bottom = 345.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_1dqp1")
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_1dqp1")
+theme_override_font_sizes/font_size = 43
+text = "Kembali"
+expand_icon = true
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,98 @@
+[gd_scene load_steps=17 format=3 uid="uid://dbtnxdrg0s7eb"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/area_good_end.gd" id="1_ldoqt"]
+[ext_resource type="Texture2D" uid="uid://ct1ano36s0tn2" path="res://Assets/Sprites/end portal ani/pixil-frame-0.png" id="2_gm75p"]
+[ext_resource type="Texture2D" uid="uid://bk32fga431u56" path="res://Assets/Sprites/end portal ani/pixil-frame-1.png" id="3_g6gud"]
+[ext_resource type="Texture2D" uid="uid://coq05xqu3k7st" path="res://Assets/Sprites/end portal ani/pixil-frame-2.png" id="4_kr6xr"]
+[ext_resource type="Texture2D" uid="uid://dcoy32mwmr8l4" path="res://Assets/Sprites/end portal ani/pixil-frame-3.png" id="5_mlm8f"]
+[ext_resource type="Texture2D" uid="uid://wqjuvana0fd8" path="res://Assets/Sprites/end portal ani/pixil-frame-4.png" id="6_pj2ru"]
+[ext_resource type="Texture2D" uid="uid://o5fweulrc12g" path="res://Assets/Sprites/end portal ani/pixil-frame-5.png" id="7_el6or"]
+[ext_resource type="Texture2D" uid="uid://bpxfjf8gxrohb" path="res://Assets/Sprites/portal billy/pixil-frame-0.png" id="8_d45p0"]
+[ext_resource type="Texture2D" uid="uid://bdfguqa0u7mby" path="res://Assets/Sprites/portal billy/pixil-frame-1.png" id="9_xipqu"]
+[ext_resource type="Texture2D" uid="uid://br2t7xecnhj33" path="res://Assets/Sprites/portal billy/pixil-frame-2.png" id="10_w0hny"]
+[ext_resource type="Texture2D" uid="uid://c1dofj0ulcpix" path="res://Assets/Sprites/portal billy/pixil-frame-3.png" id="11_3f5mr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dvrp"]
+size = Vector2(32, 49)
+
+[sub_resource type="Animation" id="Animation_a5xwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_gm75p")]
+}
+
+[sub_resource type="Animation" id="Animation_yr27i"]
+resource_name = "billy"
+length = 0.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.4001, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_d45p0"), ExtResource("9_xipqu"), ExtResource("2_gm75p"), ExtResource("10_w0hny"), ExtResource("11_3f5mr")]
+}
+
+[sub_resource type="Animation" id="Animation_1g0bi"]
+resource_name = "portal"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_gm75p"), ExtResource("3_g6gud"), ExtResource("4_kr6xr"), ExtResource("5_mlm8f"), ExtResource("6_pj2ru"), ExtResource("7_el6or")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_55bcr"]
+_data = {
+"RESET": SubResource("Animation_a5xwp"),
+"billy": SubResource("Animation_yr27i"),
+"portal": SubResource("Animation_1g0bi")
+}
+
+[node name="AreaGoodEnd" type="Area2D" node_paths=PackedStringArray("sprite", "animation_player", "collision") groups=["area_exits"]]
+z_index = -19
+collision_layer = 65536
+script = ExtResource("1_ldoqt")
+sprite = NodePath("Sprite2D")
+animation_player = NodePath("AnimationPlayer")
+collision = NodePath("CollisionShape2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.929663, 0.929663)
+texture = ExtResource("2_gm75p")
+region_rect = Rect2(22, 0, 22, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["area_exits"]]
+position = Vector2(0, 18.5)
+shape = SubResource("RectangleShape2D_1dvrp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_55bcr")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

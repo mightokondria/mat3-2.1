@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bww0h18mss7t1"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/bad_ending.gd" id="1_4vtqj"]
+[ext_resource type="VideoStream" path="res://Assets/Sprites/bad_end.ogv" id="2_ws6ry"]
+
+[sub_resource type="Theme" id="Theme_564b4"]
+
+[sub_resource type="SystemFont" id="SystemFont_n7iuk"]
+font_names = PackedStringArray("Upheaval TT (BRK)")
+
+[node name="BadEnding" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4vtqj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -644.0
+offset_top = -357.0
+offset_right = 1916.0
+offset_bottom = 1083.0
+scale = Vector2(0.502882, 0.502882)
+stream = ExtResource("2_ws6ry")
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -40.0
+offset_right = -43.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.66874, 2.66874)
+theme = SubResource("Theme_564b4")
+theme_override_fonts/font = SubResource("SystemFont_n7iuk")
+text = "PRESS ENTER CONTINUE"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 0
+offset_left = -2510.0
+offset_top = -1259.0
+offset_right = -2470.0
+offset_bottom = -1219.0
+scale = Vector2(126.839, 65.0758)
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

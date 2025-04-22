@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4l8fsavlnxq0"]
+
+[ext_resource type="PackedScene" uid="uid://cqrgu7pipba0h" path="res://Assets/Sprites/player.tscn" id="1_4ad0n"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_4ad0n")]
+jump_power = 20.0
+
+[node name="Area" type="Node2D" parent="." groups=["area_container"]]

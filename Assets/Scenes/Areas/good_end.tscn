@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyqwu8cfk0rx3"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/bad_ending.gd" id="1_kfyd5"]
+[ext_resource type="VideoStream" path="res://Assets/Scenes/good_end.ogv" id="2_2ttj2"]
+[ext_resource type="FontFile" uid="uid://d2udwoe8u714u" path="res://Assets/Fonts/upheavtt.ttf" id="3_cb6h2"]
+
+[node name="GoodEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kfyd5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -644.0
+offset_top = -357.0
+offset_right = 1916.0
+offset_bottom = 1083.0
+scale = Vector2(0.502882, 0.502882)
+stream = ExtResource("2_2ttj2")
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -249.0
+offset_top = -38.0
+offset_right = -59.0
+offset_bottom = -7.0
+scale = Vector2(2.66874, 2.66874)
+theme_override_fonts/font = ExtResource("3_cb6h2")
+text = "PRESS ENTER CONTINUE"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+layout_mode = 0
+offset_left = -2510.0
+offset_top = -1259.0
+offset_right = -2470.0
+offset_bottom = -1219.0
+scale = Vector2(126.839, 65.0758)
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
