@@ -54,3 +54,8 @@ func add_energy_cell():
 
 func reset_energy_cells():
 	energy_cells = 0
+	
+	
+	
+	
+#commit test

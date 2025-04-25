@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bww0h18mss7t1"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/bad_ending.gd" id="1_4vtqj"]
-[ext_resource type="VideoStream" path="res://Assets/Sprites/bad_end.ogv" id="2_ws6ry"]
+[ext_resource type="Script" uid="uid://c4rx4mtv8rwyw" path="res://Assets/Scripts/bad_ending.gd" id="1_4vtqj"]
+[ext_resource type="VideoStream" uid="uid://8mf75hcyxxrx" path="res://Assets/Sprites/bad_end.ogv" id="2_ws6ry"]
 
 [sub_resource type="Theme" id="Theme_564b4"]
 

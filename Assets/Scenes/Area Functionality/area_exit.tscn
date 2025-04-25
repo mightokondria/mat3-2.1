@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cr88fbipkw30p"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/area_exit.gd" id="1_wxigm"]
+[ext_resource type="Script" uid="uid://7trudhort32w" path="res://Assets/Scripts/area_exit.gd" id="1_wxigm"]
 [ext_resource type="Texture2D" uid="uid://ct1ano36s0tn2" path="res://Assets/Sprites/end portal ani/pixil-frame-0.png" id="2_plce8"]
 [ext_resource type="Texture2D" uid="uid://bk32fga431u56" path="res://Assets/Sprites/end portal ani/pixil-frame-1.png" id="3_olma1"]
 [ext_resource type="Texture2D" uid="uid://coq05xqu3k7st" path="res://Assets/Sprites/end portal ani/pixil-frame-2.png" id="4_6ds3v"]
@@ -68,9 +68,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_55bcr"]
 _data = {
-"RESET": SubResource("Animation_a5xwp"),
-"billy": SubResource("Animation_3bdkg"),
-"portal": SubResource("Animation_1g0bi")
+&"RESET": SubResource("Animation_a5xwp"),
+&"billy": SubResource("Animation_3bdkg"),
+&"portal": SubResource("Animation_1g0bi")
 }
 
 [node name="AreaExit" type="Area2D" node_paths=PackedStringArray("sprite", "animation_player") groups=["area_exits"]]

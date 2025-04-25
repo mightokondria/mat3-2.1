@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyqwu8cfk0rx3"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/bad_ending.gd" id="1_kfyd5"]
-[ext_resource type="VideoStream" path="res://Assets/Scenes/good_end.ogv" id="2_2ttj2"]
+[ext_resource type="Script" uid="uid://c4rx4mtv8rwyw" path="res://Assets/Scripts/bad_ending.gd" id="1_kfyd5"]
+[ext_resource type="VideoStream" uid="uid://cr3dhvejb32aw" path="res://Assets/Scenes/good_end.ogv" id="2_2ttj2"]
 [ext_resource type="FontFile" uid="uid://d2udwoe8u714u" path="res://Assets/Fonts/upheavtt.ttf" id="3_cb6h2"]
 
 [node name="GoodEnd" type="Control"]

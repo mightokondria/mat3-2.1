@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bup1wux0svyrs"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/moving_platform.gd" id="1_5s38w"]
+[ext_resource type="Script" uid="uid://30updft0iriy" path="res://Assets/Scripts/moving_platform.gd" id="1_5s38w"]
 [ext_resource type="Texture2D" uid="uid://c21qgs2rqhiur" path="res://Assets/Scenes/platform.png" id="2_dn6jd"]
 
 [sub_resource type="Curve2D" id="Curve2D_qtyui"]

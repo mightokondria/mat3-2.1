@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://dbtnxdrg0s7eb"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/area_good_end.gd" id="1_ldoqt"]
+[ext_resource type="Script" uid="uid://pg1s0iqgowo7" path="res://Assets/Scripts/area_good_end.gd" id="1_ldoqt"]
 [ext_resource type="Texture2D" uid="uid://ct1ano36s0tn2" path="res://Assets/Sprites/end portal ani/pixil-frame-0.png" id="2_gm75p"]
 [ext_resource type="Texture2D" uid="uid://bk32fga431u56" path="res://Assets/Sprites/end portal ani/pixil-frame-1.png" id="3_g6gud"]
 [ext_resource type="Texture2D" uid="uid://coq05xqu3k7st" path="res://Assets/Sprites/end portal ani/pixil-frame-2.png" id="4_kr6xr"]
@@ -68,9 +68,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_55bcr"]
 _data = {
-"RESET": SubResource("Animation_a5xwp"),
-"billy": SubResource("Animation_yr27i"),
-"portal": SubResource("Animation_1g0bi")
+&"RESET": SubResource("Animation_a5xwp"),
+&"billy": SubResource("Animation_yr27i"),
+&"portal": SubResource("Animation_1g0bi")
 }
 
 [node name="AreaGoodEnd" type="Area2D" node_paths=PackedStringArray("sprite", "animation_player", "collision") groups=["area_exits"]]

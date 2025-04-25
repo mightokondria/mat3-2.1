@@ -1,9 +1,9 @@
 [gd_scene load_steps=22 format=3 uid="uid://cqrgu7pipba0h"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/player_controller.gd" id="1_0uqcf"]
+[ext_resource type="Script" uid="uid://b74nfd2v7barr" path="res://Assets/Scripts/player_controller.gd" id="1_0uqcf"]
 [ext_resource type="Texture2D" uid="uid://byvq84erb7nf8" path="res://Assets/Sprites/Idle/pixil-frame-0.png" id="1_tvypq"]
 [ext_resource type="Texture2D" uid="uid://ck1s3m1bjp0cm" path="res://Assets/Sprites/Idle/pixil-frame-1.png" id="2_jtn16"]
-[ext_resource type="Script" path="res://Assets/Scripts/player_animator.gd" id="2_qdxb0"]
+[ext_resource type="Script" uid="uid://b42a1yyao3rrv" path="res://Assets/Scripts/player_animator.gd" id="2_qdxb0"]
 [ext_resource type="Texture2D" uid="uid://bycy2akcvox70" path="res://Assets/Sprites/Idle/pixil-frame-2.png" id="3_8bqb5"]
 [ext_resource type="Texture2D" uid="uid://cqs73ovl1wer0" path="res://Assets/Sprites/Idle/pixil-frame-3.png" id="4_1m3vy"]
 [ext_resource type="Texture2D" uid="uid://ddui4j6eum4tg" path="res://Assets/Sprites/Idle/pixil-frame-4.png" id="5_kdlvc"]
@@ -101,11 +101,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gwl08"]
 _data = {
-"RESET": SubResource("Animation_6djk8"),
-"fall": SubResource("Animation_8dvqu"),
-"idle": SubResource("Animation_fa0ij"),
-"jump": SubResource("Animation_bjfa8"),
-"move": SubResource("Animation_clnh2")
+&"RESET": SubResource("Animation_6djk8"),
+&"fall": SubResource("Animation_8dvqu"),
+&"idle": SubResource("Animation_fa0ij"),
+&"jump": SubResource("Animation_bjfa8"),
+&"move": SubResource("Animation_clnh2")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66hv4"]
